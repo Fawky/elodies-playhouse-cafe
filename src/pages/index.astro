@@ -649,7 +649,7 @@ import Layout from '../layouts/Layout.astro';
     transform: translateY(-52%);
     width: clamp(380px, 50%, 620px);
     pointer-events: none;
-    opacity: 0.13;
+    opacity: 0.15;
     z-index: 1;
   }
 
@@ -661,12 +661,11 @@ import Layout from '../layouts/Layout.astro';
 
   @media (max-width: 639px) {
     .hero-logo-bg {
-      right: -8%;
-      top: auto;
-      bottom: -8%;
-      transform: none;
-      width: 80vw;
-      opacity: 0.07;
+      right: 50%;
+      top: 50%;
+      transform: translate(50%, -50%);
+      width: 85vw;
+      opacity: 0.15;
     }
   }
 
