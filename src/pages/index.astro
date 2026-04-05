@@ -1,0 +1,1157 @@
+---
+import Layout from '../layouts/Layout.astro';
+---
+
+<Layout>
+
+<!-- =============================================
+     NAV BAR
+============================================= -->
+<header class="nav-header">
+  <nav class="nav-inner container">
+    <!-- Logo -->
+    <a href="/" class="nav-logo" aria-label="Élodie's Playhouse Cafe — Home">
+      <!-- House SVG -->
+      <svg class="nav-logo-svg" width="48" height="48" viewBox="0 0 64 64" fill="none" xmlns="http://www.w3.org/2000/svg" aria-hidden="true" focusable="false">
+        <!-- Chimney -->
+        <rect x="39" y="9" width="7" height="15" rx="1.5" fill="#9B9B9B"/>
+        <!-- Sun -->
+        <circle cx="16" cy="19" r="7" fill="#F0C84A"/>
+        <!-- Roof -->
+        <polygon points="8,33 32,7 56,33" fill="#6B2D0F"/>
+        <!-- House body -->
+        <rect x="11" y="31" width="42" height="27" rx="6" fill="#DFA882"/>
+        <!-- Door arch -->
+        <path d="M24,58 L24,46 Q24,39 32,39 Q40,39 40,46 L40,58 Z" fill="#FAF7F4"/>
+      </svg>
+      <span class="nav-logo-text">
+        <span class="nav-logo-name">Élodie's</span>
+        <span class="nav-logo-sub">Playhouse Cafe</span>
+      </span>
+    </a>
+
+    <!-- CTA -->
+    <a href="#early-access" class="btn btn-primary nav-cta">Get Early Access</a>
+  </nav>
+</header>
+
+
+<!-- =============================================
+     HERO SECTION
+============================================= -->
+<section class="hero" id="hero">
+  <div class="hero-inner container">
+    <div class="hero-content">
+      <span class="section-label hero-label" style="animation: fadeUp 0.6s ease both; animation-delay: 0.1s;">
+        Coming Soon to Vernon, BC
+      </span>
+
+      <h1 class="hero-headline" style="animation: fadeUp 0.6s ease both; animation-delay: 0.25s;">
+        Vernon's First Play&nbsp;Café for Families
+      </h1>
+
+      <p class="hero-subheadline" style="animation: fadeUp 0.6s ease both; animation-delay: 0.4s;">
+        Where little ones explore and parents breathe.
+      </p>
+
+      <p class="hero-body" style="animation: fadeUp 0.6s ease both; animation-delay: 0.55s;">
+        A Montessori-inspired play space paired with a warm café — designed for parents and caregivers to slow down and connect while children safely play, discover, and grow.
+      </p>
+
+      <!-- Email form -->
+      <div class="hero-form-wrap" style="animation: fadeUp 0.6s ease both; animation-delay: 0.7s;">
+        <form class="email-form" id="hero-form" novalidate>
+          <div class="email-form-row">
+            <label for="hero-email" class="visually-hidden">Your email address</label>
+            <input
+              type="email"
+              id="hero-email"
+              name="email"
+              class="email-input"
+              placeholder="Your email address"
+              required
+              autocomplete="email"
+            />
+            <button type="submit" class="btn btn-primary email-btn">Notify Me</button>
+          </div>
+          <p class="form-error" id="hero-form-error" role="alert" aria-live="polite"></p>
+        </form>
+        <div class="form-success" id="hero-form-success" aria-live="polite" hidden>
+          <svg width="22" height="22" viewBox="0 0 22 22" fill="none" xmlns="http://www.w3.org/2000/svg" aria-hidden="true">
+            <circle cx="11" cy="11" r="11" fill="#7B3A1E"/>
+            <path d="M6 11.5L9.5 15L16 8" stroke="#FAF7F4" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"/>
+          </svg>
+          <span>You're on the list!</span>
+        </div>
+        <p class="form-note" style="animation: fadeUp 0.6s ease both; animation-delay: 0.82s;">
+          Be first to know about pre-opening deals on memberships &amp; birthday parties.
+        </p>
+      </div>
+    </div>
+
+    <!-- Decorative SVG: layered warm waves -->
+    <div class="hero-deco" aria-hidden="true">
+      <svg class="hero-wave-svg" viewBox="0 0 520 560" fill="none" xmlns="http://www.w3.org/2000/svg" preserveAspectRatio="xMidYMid meet">
+        <!-- Back layer: deep warm brown at low opacity -->
+        <ellipse cx="310" cy="290" rx="210" ry="240" fill="#6B2D0F" opacity="0.06"/>
+        <!-- Mid layer: peach -->
+        <path d="M180,520 Q60,400 100,240 Q140,80 300,60 Q460,40 500,180 Q540,320 460,440 Q380,560 180,520Z" fill="#DFA882" opacity="0.18"/>
+        <!-- Inner: gold accent -->
+        <path d="M240,480 Q140,380 170,240 Q200,100 330,90 Q460,80 490,210 Q520,340 440,430 Q360,520 240,480Z" fill="#C8960A" opacity="0.10"/>
+        <!-- House silhouette watermark -->
+        <g opacity="0.10" transform="translate(200, 160) scale(1.5)">
+          <rect x="9" y="24" width="32" height="20" rx="4" fill="#6B2D0F"/>
+          <polygon points="4,24 25,6 46,24" fill="#6B2D0F"/>
+          <rect x="30" y="4" width="5" height="10" rx="1" fill="#6B2D0F"/>
+          <path d="M18,44 L18,36 Q18,31 25,31 Q32,31 32,36 L32,44 Z" fill="#FAF7F4"/>
+        </g>
+        <!-- Floating dots: gold -->
+        <circle cx="110" cy="160" r="8" fill="#C8960A" opacity="0.18"/>
+        <circle cx="440" cy="100" r="5" fill="#DFA882" opacity="0.30"/>
+        <circle cx="480" cy="360" r="10" fill="#6B2D0F" opacity="0.08"/>
+        <circle cx="150" cy="430" r="6" fill="#C8960A" opacity="0.15"/>
+      </svg>
+    </div>
+  </div>
+</section>
+
+
+<!-- =============================================
+     WHAT'S COMING SECTION
+============================================= -->
+<section class="features" id="features">
+  <div class="container">
+    <div class="features-header reveal">
+      <span class="section-label">What to Expect</span>
+      <h2 class="features-headline">Everything a growing family needs,<br class="hide-mobile"/> under one roof.</h2>
+    </div>
+
+    <div class="features-grid">
+
+      <!-- 1. Drop-In Play -->
+      <article class="feature-card reveal">
+        <div class="feature-icon" aria-hidden="true">
+          <svg width="36" height="36" viewBox="0 0 36 36" fill="none" xmlns="http://www.w3.org/2000/svg">
+            <!-- Blocks icon -->
+            <rect x="4" y="18" width="12" height="12" rx="2" fill="#7B3A1E"/>
+            <rect x="20" y="18" width="12" height="12" rx="2" fill="#DFA882"/>
+            <rect x="12" y="4" width="12" height="12" rx="2" fill="#C8960A"/>
+            <path d="M10,18 L18,10 L26,18" stroke="#7B3A1E" stroke-width="1.5" fill="none" stroke-linecap="round" stroke-linejoin="round"/>
+          </svg>
+        </div>
+        <h3 class="feature-title">Drop-In Play</h3>
+        <p class="feature-desc">Come as you are. No reservation needed. Our Montessori-style play area is open for exploration any time we are.</p>
+      </article>
+
+      <!-- 2. Monthly Memberships -->
+      <article class="feature-card reveal">
+        <div class="feature-icon" aria-hidden="true">
+          <svg width="36" height="36" viewBox="0 0 36 36" fill="none" xmlns="http://www.w3.org/2000/svg">
+            <!-- Calendar/card icon -->
+            <rect x="4" y="8" width="28" height="22" rx="3" stroke="#7B3A1E" stroke-width="2" fill="none"/>
+            <rect x="4" y="8" width="28" height="8" rx="3" fill="#7B3A1E"/>
+            <line x1="12" y1="4" x2="12" y2="10" stroke="#7B3A1E" stroke-width="2" stroke-linecap="round"/>
+            <line x1="24" y1="4" x2="24" y2="10" stroke="#7B3A1E" stroke-width="2" stroke-linecap="round"/>
+            <rect x="10" y="20" width="5" height="5" rx="1" fill="#C8960A"/>
+            <rect x="21" y="20" width="5" height="5" rx="1" fill="#DFA882"/>
+          </svg>
+        </div>
+        <h3 class="feature-title">Monthly Memberships</h3>
+        <p class="feature-desc">Unlimited visits, member-only perks, and early access to events. The best value for your regular playdate.</p>
+      </article>
+
+      <!-- 3. Birthday Parties -->
+      <article class="feature-card reveal">
+        <div class="feature-icon" aria-hidden="true">
+          <svg width="36" height="36" viewBox="0 0 36 36" fill="none" xmlns="http://www.w3.org/2000/svg">
+            <!-- Gift/present icon -->
+            <rect x="5" y="16" width="26" height="16" rx="2" fill="none" stroke="#7B3A1E" stroke-width="2"/>
+            <rect x="3" y="11" width="30" height="7" rx="2" fill="none" stroke="#7B3A1E" stroke-width="2"/>
+            <line x1="18" y1="11" x2="18" y2="32" stroke="#7B3A1E" stroke-width="2"/>
+            <!-- Ribbon bow -->
+            <path d="M18,11 Q12,6 10,9 Q8,12 14,13 L18,11Z" fill="#C8960A"/>
+            <path d="M18,11 Q24,6 26,9 Q28,12 22,13 L18,11Z" fill="#DFA882"/>
+          </svg>
+        </div>
+        <h3 class="feature-title">Birthday Parties</h3>
+        <p class="feature-desc">Magical, stress-free celebrations. We handle the setup, the space, and the magic — you just show up and celebrate.</p>
+      </article>
+
+      <!-- 4. Mommy & Me Classes -->
+      <article class="feature-card reveal">
+        <div class="feature-icon" aria-hidden="true">
+          <svg width="36" height="36" viewBox="0 0 36 36" fill="none" xmlns="http://www.w3.org/2000/svg">
+            <!-- Two figures icon -->
+            <!-- Adult figure -->
+            <circle cx="13" cy="9" r="4" fill="#7B3A1E"/>
+            <path d="M6,28 Q6,20 13,20 Q20,20 20,28" fill="#7B3A1E"/>
+            <!-- Child figure -->
+            <circle cx="25" cy="12" r="3" fill="#DFA882"/>
+            <path d="M19.5,28 Q19.5,22 25,22 Q30.5,22 30.5,28" fill="#DFA882"/>
+            <!-- Connection line -->
+            <path d="M17,24 L20,24" stroke="#C8960A" stroke-width="1.5" stroke-linecap="round"/>
+          </svg>
+        </div>
+        <h3 class="feature-title">Mommy &amp; Me Classes</h3>
+        <p class="feature-desc">Structured play and bonding sessions for caregivers and little ones. Builds connection and developmental skills.</p>
+      </article>
+
+      <!-- 5. Mom Groups & Counselling -->
+      <article class="feature-card reveal">
+        <div class="feature-icon" aria-hidden="true">
+          <svg width="36" height="36" viewBox="0 0 36 36" fill="none" xmlns="http://www.w3.org/2000/svg">
+            <!-- Heart/hand icon -->
+            <path d="M18,30 Q6,22 6,14 Q6,8 12,8 Q15,8 18,12 Q21,8 24,8 Q30,8 30,14 Q30,22 18,30Z" fill="none" stroke="#7B3A1E" stroke-width="2" stroke-linejoin="round"/>
+            <!-- Small inner heart fill at top -->
+            <path d="M18,26 Q10,19 10,14 Q10,10 13,10 Q15.5,10 18,13 Q20.5,10 23,10 Q26,10 26,14 Q26,19 18,26Z" fill="#DFA882" opacity="0.4"/>
+          </svg>
+        </div>
+        <h3 class="feature-title">Mom Groups &amp; Counselling</h3>
+        <p class="feature-desc">Our in-house counsellor hosts mom groups and individual sessions — so you can pour into yourself while your little one plays safely nearby.</p>
+      </article>
+
+      <!-- 6. Community Events -->
+      <article class="feature-card reveal">
+        <div class="feature-icon" aria-hidden="true">
+          <svg width="36" height="36" viewBox="0 0 36 36" fill="none" xmlns="http://www.w3.org/2000/svg">
+            <!-- People/community icon — three figures -->
+            <!-- Left -->
+            <circle cx="9" cy="12" r="3.5" fill="#DFA882"/>
+            <path d="M3,28 Q3,22 9,22 Q12,22 14,24" fill="#DFA882"/>
+            <!-- Right -->
+            <circle cx="27" cy="12" r="3.5" fill="#DFA882"/>
+            <path d="M22,24 Q24,22 27,22 Q33,22 33,28" fill="#DFA882"/>
+            <!-- Center (main) -->
+            <circle cx="18" cy="10" r="4" fill="#7B3A1E"/>
+            <path d="M11,28 Q11,20 18,20 Q25,20 25,28" fill="#7B3A1E"/>
+          </svg>
+        </div>
+        <h3 class="feature-title">Community Events</h3>
+        <p class="feature-desc">Workshops, seasonal events, and donation days giving back to local families. We're building more than a business.</p>
+      </article>
+
+      <!-- 7. Locally Sourced Menu -->
+      <article class="feature-card reveal">
+        <div class="feature-icon" aria-hidden="true">
+          <svg width="36" height="36" viewBox="0 0 36 36" fill="none" xmlns="http://www.w3.org/2000/svg">
+            <!-- Cup with leaf -->
+            <path d="M9,14 L12,30 Q12,32 14,32 L22,32 Q24,32 24,30 L27,14 Z" fill="none" stroke="#7B3A1E" stroke-width="2" stroke-linejoin="round"/>
+            <path d="M27,18 Q32,18 32,22 Q32,26 27,26" stroke="#7B3A1E" stroke-width="2" fill="none" stroke-linecap="round"/>
+            <!-- Leaf -->
+            <path d="M18,12 Q14,8 10,9 Q11,13 15,13 Q16.5,13 18,12Z" fill="#7B3A1E"/>
+            <path d="M18,12 Q22,8 26,9 Q25,13 21,13 Q19.5,13 18,12Z" fill="#DFA882"/>
+            <line x1="18" y1="12" x2="18" y2="7" stroke="#7B3A1E" stroke-width="1.5" stroke-linecap="round"/>
+            <!-- Steam lines -->
+            <path d="M14,10 Q13,7 14,5" stroke="#C8960A" stroke-width="1.5" fill="none" stroke-linecap="round"/>
+            <path d="M18,9 Q17,6 18,4" stroke="#C8960A" stroke-width="1.5" fill="none" stroke-linecap="round"/>
+            <path d="M22,10 Q21,7 22,5" stroke="#C8960A" stroke-width="1.5" fill="none" stroke-linecap="round"/>
+          </svg>
+        </div>
+        <h3 class="feature-title">Locally Sourced Menu</h3>
+        <p class="feature-desc">Warm drinks, cold drinks, and locally sourced bites. Because nourishing yourself is part of showing up for your family.</p>
+      </article>
+
+      <!-- 8. A Space for Connection -->
+      <article class="feature-card reveal">
+        <div class="feature-icon" aria-hidden="true">
+          <svg width="36" height="36" viewBox="0 0 36 36" fill="none" xmlns="http://www.w3.org/2000/svg">
+            <!-- Location pin / home hybrid -->
+            <path d="M18,4 Q10,4 10,13 Q10,20 18,30 Q26,20 26,13 Q26,4 18,4Z" fill="none" stroke="#7B3A1E" stroke-width="2"/>
+            <!-- Mini house inside pin -->
+            <rect x="14" y="15" width="8" height="7" rx="1" fill="#DFA882"/>
+            <polygon points="12,15 18,10 24,15" fill="#6B2D0F"/>
+            <rect x="16.5" y="19" width="3" height="3" rx="0.5" fill="#FAF7F4"/>
+          </svg>
+        </div>
+        <h3 class="feature-title">A Space for Connection</h3>
+        <p class="feature-desc">A welcoming, judgment-free zone for every kind of family. This is your village — and we're so glad you found it.</p>
+      </article>
+
+    </div>
+  </div>
+</section>
+
+
+<!-- =============================================
+     HEART SECTION
+============================================= -->
+<section class="heart" id="heart">
+  <div class="heart-inner container">
+
+    <!-- Left: Promise -->
+    <div class="heart-left reveal">
+      <div class="heart-left-inner">
+        <span class="section-label">Our Promise</span>
+        <h2 class="heart-headline">Taking care of moms is just as important as taking care of littles.</h2>
+        <p class="heart-body">
+          One of the things closest to our hearts is parent wellbeing. That's why we have an in-house counsellor offering mom groups and individual sessions — right here, while your child plays safely just steps away. You deserve to feel supported too.
+        </p>
+        <!-- Decorative heart -->
+        <div class="heart-deco-wrap" aria-hidden="true">
+          <svg width="64" height="58" viewBox="0 0 64 58" fill="none" xmlns="http://www.w3.org/2000/svg">
+            <path d="M32,54 Q6,38 6,20 Q6,6 18,6 Q25,6 32,14 Q39,6 46,6 Q58,6 58,20 Q58,38 32,54Z"
+              fill="none"
+              stroke="#DFA882"
+              stroke-width="2.5"
+            />
+            <path d="M32,46 Q14,33 14,20 Q14,12 20,12 Q25.5,12 32,19 Q38.5,12 44,12 Q50,12 50,20 Q50,33 32,46Z"
+              fill="#DFA882"
+              opacity="0.25"
+            />
+          </svg>
+        </div>
+      </div>
+    </div>
+
+    <!-- Right: Village -->
+    <div class="heart-right reveal">
+      <div class="heart-right-inner">
+        <p class="heart-village-pre">We are building more than a business.</p>
+        <p class="heart-village-main">We are building a village.</p>
+        <p class="heart-village-body">
+          Vernon's families deserve a space that truly sees them. A place to land, to breathe, to connect. Élodie's is that place.
+        </p>
+        <div class="heart-location">
+          <svg width="18" height="22" viewBox="0 0 18 22" fill="none" xmlns="http://www.w3.org/2000/svg" aria-hidden="true">
+            <path d="M9,1 Q2,1 2,8.5 Q2,14 9,21 Q16,14 16,8.5 Q16,1 9,1Z" fill="none" stroke="#7B3A1E" stroke-width="1.75"/>
+            <circle cx="9" cy="8.5" r="2.5" fill="#7B3A1E"/>
+          </svg>
+          <span>Vernon, British Columbia</span>
+        </div>
+      </div>
+    </div>
+
+  </div>
+</section>
+
+
+<!-- =============================================
+     EARLY ACCESS / CTA SECTION
+============================================= -->
+<section class="cta-section" id="early-access">
+  <!-- Watermark house -->
+  <div class="cta-watermark" aria-hidden="true">
+    <svg width="320" height="320" viewBox="0 0 64 64" fill="none" xmlns="http://www.w3.org/2000/svg">
+      <rect x="11" y="31" width="42" height="27" rx="6" fill="#FAF7F4" opacity="0.08"/>
+      <polygon points="8,33 32,7 56,33" fill="#FAF7F4" opacity="0.08"/>
+      <rect x="39" y="9" width="7" height="15" rx="1.5" fill="#FAF7F4" opacity="0.08"/>
+      <circle cx="16" cy="19" r="7" fill="#FAF7F4" opacity="0.08"/>
+      <path d="M24,58 L24,46 Q24,39 32,39 Q40,39 40,46 L40,58 Z" fill="#FAF7F4" opacity="0.08"/>
+    </svg>
+  </div>
+
+  <div class="container">
+    <div class="cta-content reveal">
+      <h2 class="cta-headline">Be the First Through Our Doors.</h2>
+      <p class="cta-sub">Sign up for early access to pre-opening membership deals and birthday party bookings.</p>
+
+      <form class="email-form email-form--light" id="cta-form" novalidate>
+        <div class="email-form-row">
+          <label for="cta-email" class="visually-hidden">Your email address</label>
+          <input
+            type="email"
+            id="cta-email"
+            name="email"
+            class="email-input email-input--light"
+            placeholder="Your email address"
+            required
+            autocomplete="email"
+          />
+          <button type="submit" class="btn btn-light email-btn">Notify Me</button>
+        </div>
+        <p class="form-error form-error--light" id="cta-form-error" role="alert" aria-live="polite"></p>
+      </form>
+
+      <div class="form-success form-success--light" id="cta-form-success" aria-live="polite" hidden>
+        <svg width="22" height="22" viewBox="0 0 22 22" fill="none" xmlns="http://www.w3.org/2000/svg" aria-hidden="true">
+          <circle cx="11" cy="11" r="11" fill="#FAF7F4"/>
+          <path d="M6 11.5L9.5 15L16 8" stroke="#7B3A1E" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"/>
+        </svg>
+        <span>You're on the list!</span>
+      </div>
+
+      <p class="cta-note">No spam, ever. Just the news you actually want.</p>
+    </div>
+  </div>
+</section>
+
+
+<!-- =============================================
+     FOOTER
+============================================= -->
+<footer class="footer">
+  <div class="footer-inner container">
+
+    <!-- Logo -->
+    <div class="footer-logo-wrap">
+      <a href="/" class="footer-logo" aria-label="Élodie's Playhouse Cafe — Home">
+        <svg width="36" height="36" viewBox="0 0 64 64" fill="none" xmlns="http://www.w3.org/2000/svg" aria-hidden="true" focusable="false">
+          <rect x="39" y="9" width="7" height="15" rx="1.5" fill="#9B9B9B"/>
+          <circle cx="16" cy="19" r="7" fill="#F0C84A"/>
+          <polygon points="8,33 32,7 56,33" fill="#6B2D0F"/>
+          <rect x="11" y="31" width="42" height="27" rx="6" fill="#DFA882"/>
+          <path d="M24,58 L24,46 Q24,39 32,39 Q40,39 40,46 L40,58 Z" fill="#FAF7F4"/>
+        </svg>
+        <span class="footer-logo-text">
+          <span class="footer-logo-name">Élodie's</span>
+          <span class="footer-logo-sub">Playhouse Cafe</span>
+        </span>
+      </a>
+    </div>
+
+    <!-- Center copyright -->
+    <p class="footer-copy">
+      &copy; <span id="footer-year"></span> Élodie's Playhouse Cafe. All rights reserved. Vernon, BC.
+    </p>
+
+    <!-- Right: design credit + social -->
+    <div class="footer-right">
+      <span class="footer-design">Design by <a href="https://steepcreative.com/" target="_blank" rel="noopener noreferrer">Steep Creative</a></span>
+      <a href="#" class="footer-social" aria-label="Follow Élodie's Playhouse Cafe on Facebook" rel="noopener noreferrer">
+        <svg width="20" height="20" viewBox="0 0 24 24" fill="none" xmlns="http://www.w3.org/2000/svg" aria-hidden="true" focusable="false">
+          <path d="M18,2 L15,2 Q12,2 11,5 L11,8 L8,8 L8,12 L11,12 L11,22 L15,22 L15,12 L18,12 L18.5,8 L15,8 L15,6 Q15,4 17,4 L18,4 Z" fill="#6B5E54"/>
+        </svg>
+      </a>
+    </div>
+
+  </div>
+</footer>
+
+
+<!-- =============================================
+     STYLES
+============================================= -->
+<style>
+
+  /* =============================================
+     VISUALLY HIDDEN (accessibility)
+  ============================================= */
+  .visually-hidden {
+    position: absolute;
+    width: 1px;
+    height: 1px;
+    padding: 0;
+    margin: -1px;
+    overflow: hidden;
+    clip: rect(0, 0, 0, 0);
+    white-space: nowrap;
+    border: 0;
+  }
+
+  /* =============================================
+     NAV BAR
+  ============================================= */
+  .nav-header {
+    position: sticky;
+    top: 0;
+    z-index: 100;
+    background-color: rgba(250, 247, 244, 0.95);
+    backdrop-filter: blur(8px);
+    -webkit-backdrop-filter: blur(8px);
+    border-bottom: 1px solid var(--color-border);
+  }
+
+  .nav-inner {
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    height: 64px;
+    gap: var(--space-4);
+  }
+
+  .nav-logo {
+    display: flex;
+    align-items: center;
+    gap: var(--space-3);
+    text-decoration: none;
+    flex-shrink: 0;
+  }
+
+  .nav-logo-svg {
+    flex-shrink: 0;
+  }
+
+  .nav-logo-text {
+    display: flex;
+    flex-direction: column;
+    line-height: 1.15;
+  }
+
+  .nav-logo-name {
+    font-family: var(--font-heading);
+    font-size: clamp(0.9375rem, 2vw, 1.125rem);
+    font-weight: 700;
+    color: var(--color-accent);
+    letter-spacing: -0.01em;
+  }
+
+  .nav-logo-sub {
+    font-family: var(--font-heading);
+    font-size: clamp(0.625rem, 1.2vw, 0.75rem);
+    font-weight: 600;
+    letter-spacing: 0.1em;
+    text-transform: uppercase;
+    color: var(--color-text-secondary);
+  }
+
+  .nav-cta {
+    flex-shrink: 0;
+    font-size: clamp(0.75rem, 1.5vw, 0.875rem);
+    padding: 0 var(--space-4);
+  }
+
+  /* =============================================
+     HERO
+  ============================================= */
+  .hero {
+    position: relative;
+    overflow: hidden;
+    background-color: var(--color-surface);
+    padding-top: var(--space-16);
+    padding-bottom: var(--space-24);
+    min-height: calc(100vh - 64px);
+    display: flex;
+    align-items: flex-start;
+  }
+
+  .hero-inner {
+    display: grid;
+    grid-template-columns: 1fr;
+    gap: var(--space-12);
+    align-items: center;
+    position: relative;
+    z-index: 2;
+  }
+
+  .hero-content {
+    max-width: 640px;
+  }
+
+  .hero-label {
+    /* Animation applied via inline style above */
+  }
+
+  .hero-headline {
+    font-size: clamp(2.25rem, 5.5vw, 4rem);
+    font-weight: 800;
+    color: var(--color-text);
+    line-height: 1.1;
+    letter-spacing: -0.025em;
+    margin-top: var(--space-3);
+    margin-bottom: var(--space-6);
+  }
+
+  .hero-subheadline {
+    font-family: var(--font-heading);
+    font-size: clamp(1.125rem, 2.5vw, 1.5rem);
+    font-weight: 500;
+    color: var(--color-accent);
+    margin-bottom: var(--space-6);
+    max-width: 52ch;
+    line-height: 1.35;
+  }
+
+  .hero-body {
+    font-size: clamp(1rem, 1.5vw, 1.0625rem);
+    color: var(--color-text-secondary);
+    line-height: 1.7;
+    margin-bottom: var(--space-8);
+    max-width: 58ch;
+  }
+
+  /* Email Form — shared styles */
+  .email-form {
+    width: 100%;
+  }
+
+  .email-form-row {
+    display: flex;
+    gap: var(--space-2);
+    flex-wrap: wrap;
+    margin-bottom: var(--space-3);
+  }
+
+  .email-input {
+    flex: 1 1 240px;
+    height: 44px;
+    padding: 0 var(--space-4);
+    border: 1.5px solid var(--color-border);
+    border-radius: 6px;
+    font-family: var(--font-body);
+    font-size: 0.9375rem;
+    color: var(--color-text);
+    background-color: #FFFFFF;
+    outline: none;
+    transition: border-color 0.2s ease, box-shadow 0.2s ease;
+    min-width: 0;
+  }
+
+  .email-input::placeholder {
+    color: #A09389;
+  }
+
+  .email-input:focus {
+    border-color: var(--color-accent);
+    box-shadow: 0 0 0 3px rgba(123, 58, 30, 0.12);
+  }
+
+  .email-input--light {
+    background-color: rgba(250, 247, 244, 0.15);
+    border-color: rgba(250, 247, 244, 0.35);
+    color: #FAF7F4;
+  }
+
+  .email-input--light::placeholder {
+    color: rgba(250, 247, 244, 0.6);
+  }
+
+  .email-input--light:focus {
+    border-color: rgba(250, 247, 244, 0.8);
+    box-shadow: 0 0 0 3px rgba(250, 247, 244, 0.12);
+  }
+
+  .email-btn {
+    flex-shrink: 0;
+    padding: 0 var(--space-6);
+  }
+
+  .form-error {
+    font-size: 0.8125rem;
+    color: #C0392B;
+    min-height: 1.2em;
+  }
+
+  .form-error--light {
+    color: #FFBFB5;
+  }
+
+  .form-success {
+    display: flex;
+    align-items: center;
+    gap: var(--space-2);
+    font-family: var(--font-heading);
+    font-size: 0.9375rem;
+    font-weight: 600;
+    color: var(--color-accent);
+    margin-bottom: var(--space-3);
+  }
+
+  .form-success--light {
+    color: #FAF7F4;
+  }
+
+  .form-note {
+    font-size: 0.8125rem;
+    color: var(--color-text-secondary);
+    margin-top: var(--space-3);
+    max-width: 50ch;
+  }
+
+  /* Hero form wrap */
+  .hero-form-wrap {
+    max-width: 540px;
+  }
+
+  /* Decorative wave */
+  .hero-deco {
+    display: none;
+    position: absolute;
+    right: -4%;
+    top: 50%;
+    transform: translateY(-50%);
+    width: min(46%, 520px);
+    pointer-events: none;
+    z-index: 1;
+  }
+
+  .hero-wave-svg {
+    width: 100%;
+    height: auto;
+  }
+
+  /* =============================================
+     FEATURES SECTION
+  ============================================= */
+  .features {
+    background-color: var(--color-surface-alt);
+    padding-top: var(--space-24);
+    padding-bottom: var(--space-24);
+  }
+
+  .features-header {
+    text-align: center;
+    margin-bottom: var(--space-16);
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+  }
+
+  .features-headline {
+    font-size: clamp(1.75rem, 3.5vw, 2.5rem);
+    font-weight: 700;
+    color: var(--color-text);
+    letter-spacing: -0.02em;
+    max-width: 22ch;
+    text-align: center;
+  }
+
+  .features-grid {
+    display: grid;
+    grid-template-columns: 1fr;
+    gap: var(--space-6);
+  }
+
+  .feature-card {
+    background-color: var(--color-surface);
+    border: 1px solid var(--color-border);
+    border-radius: 16px;
+    padding: var(--space-8);
+    display: flex;
+    flex-direction: column;
+    gap: var(--space-4);
+    transition: box-shadow 0.25s ease, transform 0.25s ease;
+  }
+
+  .feature-card:hover {
+    box-shadow: 0 8px 32px rgba(107, 45, 15, 0.09);
+    transform: translateY(-3px);
+  }
+
+  .feature-icon {
+    width: 56px;
+    height: 56px;
+    background-color: var(--color-surface-alt);
+    border-radius: 12px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    flex-shrink: 0;
+  }
+
+  .feature-title {
+    font-family: var(--font-heading);
+    font-size: 1.0625rem;
+    font-weight: 700;
+    color: var(--color-text);
+    line-height: 1.25;
+  }
+
+  .feature-desc {
+    font-size: 0.9375rem;
+    color: var(--color-text-secondary);
+    line-height: 1.65;
+    max-width: 38ch;
+  }
+
+  .hide-mobile {
+    display: none;
+  }
+
+  /* =============================================
+     HEART SECTION
+  ============================================= */
+  .heart {
+    background-color: var(--color-surface);
+    padding-top: var(--space-24);
+    padding-bottom: var(--space-24);
+  }
+
+  .heart-inner {
+    display: grid;
+    grid-template-columns: 1fr;
+    gap: var(--space-6);
+    align-items: stretch;
+  }
+
+  /* Left: promise block */
+  .heart-left {
+    border-radius: 20px;
+    overflow: hidden;
+  }
+
+  .heart-left-inner {
+    background-color: #F5EDE4;
+    padding: var(--space-12) var(--space-8);
+    height: 100%;
+    display: flex;
+    flex-direction: column;
+    gap: var(--space-6);
+    border-radius: 20px;
+  }
+
+  .heart-headline {
+    font-size: clamp(1.5rem, 3vw, 2.125rem);
+    font-weight: 700;
+    color: var(--color-text);
+    letter-spacing: -0.02em;
+    line-height: 1.25;
+    max-width: 22ch;
+  }
+
+  .heart-body {
+    font-size: clamp(0.9375rem, 1.5vw, 1rem);
+    color: var(--color-text-secondary);
+    line-height: 1.7;
+    max-width: 52ch;
+  }
+
+  .heart-deco-wrap {
+    margin-top: var(--space-4);
+  }
+
+  /* Right: village block */
+  .heart-right {
+    border-radius: 20px;
+    overflow: hidden;
+  }
+
+  .heart-right-inner {
+    background-color: var(--color-surface-alt);
+    padding: var(--space-12) var(--space-8);
+    height: 100%;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    gap: var(--space-4);
+    border-radius: 20px;
+    border: 1px solid var(--color-border);
+  }
+
+  .heart-village-pre {
+    font-family: var(--font-heading);
+    font-size: clamp(1rem, 2vw, 1.25rem);
+    font-weight: 600;
+    color: var(--color-accent);
+    max-width: none;
+    line-height: 1.3;
+  }
+
+  .heart-village-main {
+    font-family: var(--font-heading);
+    font-size: clamp(1.75rem, 4vw, 2.75rem);
+    font-weight: 800;
+    color: var(--color-text);
+    letter-spacing: -0.03em;
+    line-height: 1.1;
+    max-width: none;
+  }
+
+  .heart-village-body {
+    font-size: clamp(0.9375rem, 1.5vw, 1.0625rem);
+    color: var(--color-text-secondary);
+    line-height: 1.7;
+    max-width: 42ch;
+  }
+
+  .heart-location {
+    display: flex;
+    align-items: center;
+    gap: var(--space-2);
+    margin-top: var(--space-2);
+  }
+
+  .heart-location span {
+    font-family: var(--font-heading);
+    font-size: 0.875rem;
+    font-weight: 600;
+    color: var(--color-accent);
+    letter-spacing: 0.04em;
+    text-transform: uppercase;
+  }
+
+  /* =============================================
+     CTA SECTION
+  ============================================= */
+  .cta-section {
+    position: relative;
+    overflow: hidden;
+    background-color: var(--color-accent);
+    padding-top: var(--space-24);
+    padding-bottom: var(--space-24);
+  }
+
+  .cta-watermark {
+    position: absolute;
+    right: -64px;
+    bottom: -64px;
+    pointer-events: none;
+    opacity: 1;
+  }
+
+  .cta-content {
+    text-align: center;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    gap: var(--space-6);
+    position: relative;
+    z-index: 2;
+  }
+
+  .cta-headline {
+    font-size: clamp(2rem, 4.5vw, 3.25rem);
+    font-weight: 800;
+    color: #FAF7F4;
+    letter-spacing: -0.025em;
+    line-height: 1.1;
+    max-width: 20ch;
+  }
+
+  .cta-sub {
+    font-size: clamp(1rem, 1.8vw, 1.1875rem);
+    color: rgba(250, 247, 244, 0.82);
+    max-width: 50ch;
+    line-height: 1.6;
+  }
+
+  .cta-note {
+    font-size: 0.8125rem;
+    color: rgba(250, 247, 244, 0.6);
+    letter-spacing: 0.02em;
+    max-width: none;
+    margin-top: calc(var(--space-4) * -1);
+  }
+
+  .email-form--light .email-btn {
+    background-color: #FAF7F4;
+    color: var(--color-accent);
+  }
+
+  .email-form--light .email-btn:hover {
+    background-color: #FFFFFF;
+    color: var(--color-accent-hover);
+  }
+
+  /* =============================================
+     FOOTER
+  ============================================= */
+  .footer {
+    background-color: var(--color-surface);
+    border-top: 1px solid var(--color-border);
+    padding-top: var(--space-8);
+    padding-bottom: var(--space-8);
+  }
+
+  .footer-inner {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    gap: var(--space-6);
+    text-align: center;
+  }
+
+  .footer-logo {
+    display: flex;
+    align-items: center;
+    gap: var(--space-3);
+    text-decoration: none;
+  }
+
+  .footer-logo-text {
+    display: flex;
+    flex-direction: column;
+    line-height: 1.2;
+  }
+
+  .footer-logo-name {
+    font-family: var(--font-heading);
+    font-size: 0.9375rem;
+    font-weight: 700;
+    color: var(--color-accent);
+  }
+
+  .footer-logo-sub {
+    font-family: var(--font-heading);
+    font-size: 0.625rem;
+    font-weight: 600;
+    letter-spacing: 0.1em;
+    text-transform: uppercase;
+    color: var(--color-text-secondary);
+  }
+
+  .footer-copy {
+    font-size: 0.8125rem;
+    color: var(--color-text-secondary);
+    line-height: 1.6;
+    max-width: none;
+  }
+
+  .footer-right {
+    display: flex;
+    align-items: center;
+    gap: var(--space-4);
+  }
+
+  .footer-design {
+    font-size: 0.8125rem;
+    color: var(--color-text-secondary);
+  }
+
+  .footer-design a {
+    color: var(--color-accent);
+    font-weight: 600;
+    text-decoration: underline;
+    text-underline-offset: 3px;
+  }
+
+  .footer-social {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    width: 36px;
+    height: 36px;
+    border-radius: 50%;
+    border: 1px solid var(--color-border);
+    background-color: #FFFFFF;
+    text-decoration: none;
+    transition: border-color 0.2s ease, background-color 0.2s ease;
+  }
+
+  .footer-social:hover {
+    border-color: var(--color-accent);
+    background-color: var(--color-surface-alt);
+  }
+
+  /* =============================================
+     STAGGER DELAYS FOR REVEAL
+  ============================================= */
+  .features-grid .feature-card:nth-child(2) { transition-delay: 0.08s; }
+  .features-grid .feature-card:nth-child(3) { transition-delay: 0.16s; }
+  .features-grid .feature-card:nth-child(4) { transition-delay: 0.06s; }
+  .features-grid .feature-card:nth-child(5) { transition-delay: 0.12s; }
+  .features-grid .feature-card:nth-child(6) { transition-delay: 0.18s; }
+  .features-grid .feature-card:nth-child(7) { transition-delay: 0.09s; }
+  .features-grid .feature-card:nth-child(8) { transition-delay: 0.15s; }
+
+  /* =============================================
+     RESPONSIVE — TABLET (640px+)
+  ============================================= */
+  @media (min-width: 640px) {
+    .features-grid {
+      grid-template-columns: repeat(2, 1fr);
+    }
+
+    .footer-inner {
+      flex-direction: row;
+      justify-content: space-between;
+      text-align: left;
+    }
+  }
+
+  /* =============================================
+     RESPONSIVE — DESKTOP (1024px+)
+  ============================================= */
+  @media (min-width: 1024px) {
+    .hero-inner {
+      grid-template-columns: 1fr 1fr;
+      min-height: calc(100vh - 64px);
+    }
+
+    .hero {
+      padding-top: var(--space-24);
+      padding-bottom: var(--space-24);
+      align-items: flex-start;
+    }
+
+    .hero-deco {
+      display: block;
+    }
+
+    .features-grid {
+      grid-template-columns: repeat(3, 1fr);
+    }
+
+    .hide-mobile {
+      display: block;
+    }
+
+    .heart-inner {
+      grid-template-columns: 1fr 1fr;
+    }
+  }
+
+  /* =============================================
+     RESPONSIVE — MOBILE-SPECIFIC
+  ============================================= */
+  @media (max-width: 639px) {
+    .hero {
+      min-height: 80vh;
+      padding-top: var(--space-12);
+      padding-bottom: var(--space-12);
+    }
+
+    .email-form-row {
+      flex-direction: column;
+    }
+
+    .email-input {
+      width: 100%;
+      flex: none;
+    }
+
+    .email-btn {
+      width: 100%;
+    }
+  }
+
+</style>
+
+<!-- =============================================
+     JAVASCRIPT
+============================================= -->
+<script>
+  // Footer year
+  const yearEl = document.getElementById('footer-year');
+  if (yearEl) yearEl.textContent = String(new Date().getFullYear());
+
+  // Email form handler
+  function setupForm(
+    formId: string,
+    emailId: string,
+    errorId: string,
+    successId: string
+  ) {
+    const form = document.getElementById(formId) as HTMLFormElement | null;
+    const emailInput = document.getElementById(emailId) as HTMLInputElement | null;
+    const errorEl = document.getElementById(errorId) as HTMLParagraphElement | null;
+    const successEl = document.getElementById(successId) as HTMLDivElement | null;
+
+    if (!form || !emailInput || !errorEl || !successEl) return;
+
+    form.addEventListener('submit', (e) => {
+      e.preventDefault();
+
+      const email = emailInput.value.trim();
+      const emailRegex = /^[^\s@]+@[^\s@]+\.[^\s@]+$/;
+
+      if (!email) {
+        errorEl.textContent = 'Please enter your email address.';
+        emailInput.focus();
+        return;
+      }
+
+      if (!emailRegex.test(email)) {
+        errorEl.textContent = 'Please enter a valid email address.';
+        emailInput.focus();
+        return;
+      }
+
+      // Clear error
+      errorEl.textContent = '';
+
+      // Show success state
+      form.hidden = true;
+      successEl.hidden = false;
+    });
+
+    // Clear error on input
+    emailInput.addEventListener('input', () => {
+      errorEl.textContent = '';
+    });
+  }
+
+  setupForm('hero-form', 'hero-email', 'hero-form-error', 'hero-form-success');
+  setupForm('cta-form', 'cta-email', 'cta-form-error', 'cta-form-success');
+</script>
+
+</Layout>

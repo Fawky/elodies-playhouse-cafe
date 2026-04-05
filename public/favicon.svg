@@ -1,0 +1,12 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 64 64" fill="none">
+  <!-- Chimney -->
+  <rect x="38" y="10" width="7" height="14" rx="1" fill="#9B9B9B"/>
+  <!-- Roof triangle -->
+  <polygon points="10,32 32,8 54,32" fill="#6B2D0F"/>
+  <!-- House body -->
+  <rect x="12" y="30" width="40" height="28" rx="5" fill="#DFA882"/>
+  <!-- Sun circle -->
+  <circle cx="18" cy="20" r="6" fill="#F0C84A"/>
+  <!-- Door arch -->
+  <path d="M26,58 L26,46 Q26,40 32,40 Q38,40 38,46 L38,58 Z" fill="#FAF7F4"/>
+</svg>

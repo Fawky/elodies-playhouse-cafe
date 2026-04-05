@@ -1,0 +1,261 @@
+---
+export interface Props {
+  title?: string;
+  description?: string;
+}
+
+const {
+  title = "Élodie's Playhouse Cafe — Coming Soon to Vernon, BC",
+  description = "Vernon's first play café for families. A Montessori-inspired play space paired with a warm café — designed for parents to slow down while children safely play, discover, and grow. Opening soon in Vernon, BC.",
+} = Astro.props;
+---
+
+<!doctype html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <meta name="description" content={description} />
+    <meta name="robots" content="index, follow" />
+
+    <!-- Open Graph -->
+    <meta property="og:type" content="website" />
+    <meta property="og:url" content="https://elodiesplayhousecafe.ca/" />
+    <meta property="og:title" content={title} />
+    <meta property="og:description" content={description} />
+    <meta property="og:locale" content="en_CA" />
+
+    <!-- Twitter Card -->
+    <meta name="twitter:card" content="summary_large_image" />
+    <meta name="twitter:title" content={title} />
+    <meta name="twitter:description" content={description} />
+
+    <link rel="icon" type="image/svg+xml" href="/favicon.svg" />
+    <link rel="canonical" href="https://elodiesplayhousecafe.ca/" />
+
+    <!-- Google Fonts -->
+    <link rel="preconnect" href="https://fonts.googleapis.com" />
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+    <link
+      href="https://fonts.googleapis.com/css2?family=Montserrat:wght@400;500;600;700;800&family=Open+Sans:wght@400;500;600&display=swap"
+      rel="stylesheet"
+    />
+
+    <title>{title}</title>
+
+    <style is:global>
+      /* =============================================
+         CSS CUSTOM PROPERTIES
+      ============================================= */
+      :root {
+        --color-surface:           #FAF7F4;
+        --color-surface-alt:       #F2EBE3;
+        --color-text:              #1C1410;
+        --color-text-secondary:    #6B5E54;
+        --color-border:            #E0D4CA;
+        --color-accent:            #7B3A1E;
+        --color-accent-hover:      #5C2A13;
+        --color-warm:              #DFA882;
+        --color-gold:              #C8960A;
+
+        /* Spacing scale (4px base) */
+        --space-1:  4px;
+        --space-2:  8px;
+        --space-3:  12px;
+        --space-4:  16px;
+        --space-6:  24px;
+        --space-8:  32px;
+        --space-12: 48px;
+        --space-16: 64px;
+        --space-24: 96px;
+        --space-32: 128px;
+
+        /* Typography */
+        --font-heading: 'Montserrat', sans-serif;
+        --font-body:    'Open Sans', sans-serif;
+        --max-width:    1200px;
+        --max-prose:    65ch;
+      }
+
+      /* =============================================
+         RESET & BASE
+      ============================================= */
+      *, *::before, *::after {
+        box-sizing: border-box;
+        margin: 0;
+        padding: 0;
+      }
+
+      html {
+        font-size: 16px;
+        scroll-behavior: smooth;
+        -webkit-text-size-adjust: 100%;
+      }
+
+      body {
+        font-family: var(--font-body);
+        font-size: 1rem;
+        line-height: 1.6;
+        color: var(--color-text);
+        background-color: var(--color-surface);
+        -webkit-font-smoothing: antialiased;
+        -moz-osx-font-smoothing: grayscale;
+        overflow-x: hidden;
+      }
+
+      img, svg {
+        display: block;
+        max-width: 100%;
+      }
+
+      a {
+        color: var(--color-accent);
+        text-decoration: underline;
+        text-underline-offset: 3px;
+        transition: color 0.2s ease;
+      }
+
+      a:hover {
+        color: var(--color-accent-hover);
+      }
+
+      p {
+        max-width: var(--max-prose);
+      }
+
+      h1, h2, h3, h4, h5, h6 {
+        font-family: var(--font-heading);
+        line-height: 1.2;
+        color: var(--color-text);
+        font-weight: 700;
+      }
+
+      /* =============================================
+         ANIMATIONS
+      ============================================= */
+      @keyframes fadeUp {
+        from {
+          opacity: 0;
+          transform: translateY(24px);
+        }
+        to {
+          opacity: 1;
+          transform: translateY(0);
+        }
+      }
+
+      .reveal {
+        opacity: 0;
+        transform: translateY(16px);
+        transition: opacity 0.6s ease, transform 0.6s ease;
+      }
+
+      .reveal.visible {
+        opacity: 1;
+        transform: translateY(0);
+      }
+
+      /* =============================================
+         UTILITY
+      ============================================= */
+      .container {
+        width: 100%;
+        max-width: var(--max-width);
+        margin-left: auto;
+        margin-right: auto;
+        padding-left: var(--space-6);
+        padding-right: var(--space-6);
+      }
+
+      .section-label {
+        display: inline-block;
+        font-family: var(--font-heading);
+        font-size: 0.6875rem;
+        font-weight: 700;
+        letter-spacing: 0.12em;
+        text-transform: uppercase;
+        color: var(--color-accent);
+        margin-bottom: var(--space-4);
+      }
+
+      .btn {
+        display: inline-flex;
+        align-items: center;
+        justify-content: center;
+        height: 44px;
+        padding: 0 var(--space-6);
+        border-radius: 6px;
+        font-family: var(--font-heading);
+        font-size: 0.875rem;
+        font-weight: 700;
+        letter-spacing: 0.03em;
+        cursor: pointer;
+        transition: background-color 0.2s ease, transform 0.15s ease, box-shadow 0.2s ease;
+        text-decoration: none;
+        border: none;
+        white-space: nowrap;
+      }
+
+      .btn-primary {
+        background-color: var(--color-accent);
+        color: #FAF7F4;
+      }
+
+      .btn-primary:hover {
+        background-color: var(--color-accent-hover);
+        color: #FAF7F4;
+        transform: translateY(-1px);
+        box-shadow: 0 4px 16px rgba(123, 58, 30, 0.25);
+      }
+
+      .btn-primary:active {
+        transform: translateY(0);
+      }
+
+      .btn-light {
+        background-color: #FAF7F4;
+        color: var(--color-accent);
+      }
+
+      .btn-light:hover {
+        background-color: #FFFFFF;
+        color: var(--color-accent-hover);
+        transform: translateY(-1px);
+        box-shadow: 0 4px 16px rgba(0,0,0,0.12);
+      }
+
+      /* =============================================
+         HIDDEN ATTRIBUTE — prevent display:flex override
+      ============================================= */
+      [hidden] {
+        display: none !important;
+      }
+
+      /* =============================================
+         SCROLL REVEAL SCRIPT
+      ============================================= */
+    </style>
+  </head>
+  <body>
+    <slot />
+
+    <script>
+      // Intersection Observer for scroll reveal
+      const observer = new IntersectionObserver(
+        (entries) => {
+          entries.forEach((entry) => {
+            if (entry.isIntersecting) {
+              entry.target.classList.add('visible');
+              observer.unobserve(entry.target);
+            }
+          });
+        },
+        { threshold: 0.12 }
+      );
+
+      document.querySelectorAll('.reveal').forEach((el) => {
+        observer.observe(el);
+      });
+    </script>
+  </body>
+</html>
